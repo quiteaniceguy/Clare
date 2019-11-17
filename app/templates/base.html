@@ -1,0 +1,18 @@
+<html>
+	<head>
+		{% if title %}
+		<title>{{ title }} - Bloggy</title>
+		{% else %}
+		<title>Welcome to bloggy</title>
+		{% endif %}
+	</head>
+	<body>
+		Clare:
+		<a href="{{ url_for('index') }}">Index</a>
+		<a href="{{ url_for('login') }}">Login</a>
+		<a href="{{ url_for('logout') }}">Logout</a>
+		<hr>
+		{% block content %}{% endblock %}
+	</body>
+</html>
+	
